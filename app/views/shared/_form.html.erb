@@ -1,13 +1,28 @@
-<!-- <div class ="container-form">
+<div class ="container-form">
   <div class="row">
     <div class="col-sm-10 col-md-12">
       <header> </header>
       <div id="form">
 
 
+        <%= simple_form_for(@drone) do |f| %>
+        <h1>Add Drone</h1>
+        <br>
+        <div class="form-group">
+          <%= f.input :name %>
+          <%= f.input :description %>
+          <%= f.input :location %>
+          <%= f.input :price %>
+          <%= f.input :photo %>
+          <%#= f.input :photo_cache, as: :hidden %>
+        </div>
+        <%#= link_to "home" , cocktails_path, class: 'btn btn-info'%>
+        <%= f.submit class: 'btn btn-primary' %>
+        <% end %>
+
 
       </div>
     </div>
   </div>
 </div>
- -->
+
