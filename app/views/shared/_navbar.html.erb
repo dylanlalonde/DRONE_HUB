@@ -6,10 +6,9 @@
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
-  <!-- Links when logged in -->
   <%= link_to "Browse", "drones#index", class: "navbar-wagon-item navbar-wagon-link" %>
 
-
+  <!-- Links when logged in -->
     <% if user_signed_in? %>
     <%= link_to "Add Drone", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
