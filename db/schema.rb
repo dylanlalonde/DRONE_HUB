@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2018_06_11_132215) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.string "status"
+    t.string "status" #add default pending
     t.date "start_date"
     t.date "end_date"
     t.bigint "drone_id"
