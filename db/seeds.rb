@@ -43,8 +43,4 @@ puts 'making record'
   end
 end
 
-
-
-# user = User.all.sample
-# drone = user.drone
 puts 'completed'
