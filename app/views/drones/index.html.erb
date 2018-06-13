@@ -1,9 +1,39 @@
-<h1> INDEX DRONES </h1>
+<h1> All Drones </h1>
 
 listing all drones and informations
 <br>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <!-- insert <div class="card"> -->
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../../app/assets/images/<%=rand(1...5)%>jpg');">
+        <div class="card-category">$<%="#{rand(20..40)}"%>/hr</div>
+      <div class="card-description">
+    <h2>Drone.name</h2>
+    <p>Drone Description</p>
+    </div>
+    <a class="card-link" href="drone#id" ></a>
+    </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <!-- insert <div class="card"> -->
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <!-- insert <div class="card"> -->
+    </div>
+  </div>
+</div>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta exercitationem fuga perferendis consectetur nisi ratione, sequi aspernatur, perspiciatis adipisci iste sint mollitia quos deleniti saepe ex, esse aliquid consequuntur. Voluptate.</p>
-
-
-<h1>hi</h1>
+<!--
+<% @drones.each do |drone| %>
+<ul>
+  <li>
+    <%= drone.name %>
+    <%= drone.description %>
+    <%= drone.location %>
+    <%= drone.photo %>
+    <%= drone.price %>
+  </li>
+</ul>
+<% end %>
+-->
