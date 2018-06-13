@@ -30,7 +30,8 @@ puts 'making record'
     location = Faker::University.name
     photo = Faker::Pokemon.name
     price = rand(20..40)
-    d= Drone.new({name:name, description:description, location:location, photo:photo,price:price})
+    category = ["Delivery", "Military", "Agriculture", "Racing", "Sport", "Photography"].sample
+    d= Drone.new({name:name, description:description, location:location, photo:photo, price:price, category:category})
     d.user = u
     d.save
     # Booking Loop

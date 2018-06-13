@@ -1,0 +1,26 @@
+.main-container {
+  display: flex;
+}
+
+.cards-container {
+  flex: 3 0 0;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#map {
+  flex: 1 0 0;
+  height: 100vh;
+  position: sticky !important; /* !important to override Gmaps inline CSS */
+  top: 0 !important;
+  background-color: lightgrey;
+}
+
+.search {
+  display: flex;
+  background-color: $blue;
+}
+
+.search-bar {
+  text-align: center;
+}
