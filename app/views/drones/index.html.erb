@@ -1,8 +1,35 @@
-<h1> INDEX DRONES </h1>
-
-listing all drones and informations
-<br>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta exercitationem fuga perferendis consectetur nisi ratione, sequi aspernatur, perspiciatis adipisci iste sint mollitia quos deleniti saepe ex, esse aliquid consequuntur. Voluptate.</p>
-
-
+<div class="main-container">
+  <div class="cards-container">
+    <div class="search">
+      <div class="search-bar">
+        <%= form_tag(drones_path, method: :get) do %>
+        <%= text_field_tag :query, nil, placeholder: "Search..." %>
+        <%= submit_tag "Filter", class: "btn btn-primary btn-mg" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <% @drones.each do |drone| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card-wrapper">
+          <div class="card-image">
+            <!-- image in css -->
+            <div class="card-category">
+              <%= drone.category %>
+              <!-- need drone-type in model, will put here. -->
+            </div>
+          </div>
+          <div class="card-description">
+            <h2>           <%= link_to drone.name, drone_path(drone), class: "link-text" %></h2>
+            <h5> Pickup at <%= drone.location %></h5>
+            <h6>         $ <%= drone.price %> per day</h6>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <div id="map">
+    <!-- map will go here -->
+  </div>
+</div>
