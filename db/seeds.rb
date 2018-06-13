@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 puts "deleting records"
+Booking.destroy_all
 Drone.destroy_all
 User.destroy_all
-Booking.destroy_all
 
 puts 'making record'
 
