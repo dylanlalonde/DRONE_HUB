@@ -1,8 +1,23 @@
-<div class="banner">
+<div class="slideshow_container">
+  <div id="slideshow">
+    <div class="elemnt"></div>
+    <div class="elemnt1"></div>
+    <div class="elemnt2"></div>
+    <div class="elemnt3"></div>
+    <div class="elemnt4"></div>
+    <div class="elemnt5"></div>
+  </div>
+  <div class="banner">
   <div class="banner-content">
-      <h1>Pages#home</h1>
-      <p>Find me in app/views/pages/home.html.erb</p>
-      <a class="btn btn-primary btn-lg">Rent a Drone</a>
+      <h1>DRONE_HUB</h1>
+      <p>_____ Drone</p>
+      <div class="search-container">
+          <%= form_tag(drones_path, method: :get) do %>
+            <%= text_field_tag :query, nil, placeholder: "Search..." %>
+            <%= submit_tag "Rent a drone", class: "btn btn-primary btn-mg"%>
+          <% end %>
+      </div>
+  </div>
   </div>
 </div>
 
