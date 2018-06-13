@@ -21,3 +21,45 @@
   </div>
 </div>
 
+<div class="cards-container">
+    <div class="row">
+    <h2>Most Popular<h2>
+      <% @drones.each do |drone| %>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="card-wrapper">
+          <div class="card-image">
+            <div class="card-category">
+              <%= drone.category %>
+            </div>
+          </div>
+          <div class="card-description">
+            <h2>  <%= link_to drone.name, drone_path(drone), class: "link-text" %></h2>
+            <h5> Pickup at <%= drone.location %></h5>
+            <h5> $<%= drone.price %> per hour</h5>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="cards-container">
+    <div class="row">
+    <h2> Delivery Drones <h2>
+      <% @drones2.each do |drone| %>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="card-wrapper">
+          <div class="card-image">
+            <div class="card-category">
+              <%= drone.category %>
+            </div>
+          </div>
+          <div class="card-description">
+            <h2>  <%= link_to drone.name, drone_path(drone), class: "link-text" %></h2>
+            <h5> Pickup at <%= drone.location %></h5>
+            <h6> $<%= drone.price %> per day</h5>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>

@@ -24,13 +24,7 @@ height: 100%;
 display: inline-block;
 text-align: center;
 }
-span{
-  border: 1px solid #000;
-  border-radius: 3px;
-  box-shadow: 0 0 5px 0 hsla(0,0%,30%, .3);
-  font-size:4em;
-  background-color:#fff
-}
+
 .elemnt {
   animation: xfade 10s 8s infinite;
   background-image: url('10.jpg');

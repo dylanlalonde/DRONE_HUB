@@ -24,12 +24,12 @@ puts 'making record'
   # creating an instance of the user
   u = User.create(email: email, password: password, name: name, photo: photo, description: description)
   # Drone Loop
-  3.times do
+  20.times do
     name = Faker::StarWars.droid
     description = Faker::VForVendetta.quote
     location = Faker::University.name
     photo = Faker::Pokemon.name
-    price = rand(20..40)
+    price = rand(50..200)
     category = ["Delivery", "Military", "Agriculture", "Racing", "Sport", "Photography"].sample
     d= Drone.new({name:name, description:description, location:location, photo:photo, price:price, category:category})
     d.user = u
