@@ -11,6 +11,8 @@
   <!-- Links when logged in -->
     <% if user_signed_in? %>
     <%= link_to "List Drone", "drones/new", class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Show Drone", "drones#show", class: "navbar-wagon-item navbar-wagon-link" %>
+
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -46,8 +48,9 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Browse</a></li>
-        <li><a href="#">List Drone</a></li>
+        <li><a href="drones#index">Browse</a></li>
+        <li><a href="drones#show">Show</a></li>
+        <li><a href="drones/new">List Drone</a></li>
         <li><a href="#">Profile</a></li>
       </ul>
     </div>
