@@ -10,7 +10,6 @@
   <div class="banner">
   <div class="banner-content">
       <h1>DRONE_HUB</h1>
-      <p>_____ Drone</p>
       <div class="search-container">
           <%= form_tag(drones_path, method: :get) do %>
             <%= text_field_tag :query, nil, placeholder: "Search..." %>
@@ -35,7 +34,7 @@
           <div class="card-description">
             <h2>  <%= link_to drone.name, drone_path(drone), class: "link-text" %></h2>
             <h5> Pickup at <%= drone.location %></h5>
-            <h5> $<%= drone.price %> per hour</h5>
+            <h6> $<%= drone.price %> per hour</h6>
           </div>
         </div>
       </div>
@@ -56,7 +55,7 @@
           <div class="card-description">
             <h2>  <%= link_to drone.name, drone_path(drone), class: "link-text" %></h2>
             <h5> Pickup at <%= drone.location %></h5>
-            <h6> $<%= drone.price %> per day</h5>
+            <h6> $<%= drone.price %> per day</h6>
           </div>
         </div>
       </div>
