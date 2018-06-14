@@ -1,8 +1,9 @@
 class Drone < ApplicationRecord
   include PgSearch
   belongs_to :user
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
   has_many :users, through: :bookings
+  mount_uploader :photo, PhotoUploader
 
   # SEARCH FUNCTIONALITY:
   pg_search_scope :search_by_name_and_description_and_category_and_location,

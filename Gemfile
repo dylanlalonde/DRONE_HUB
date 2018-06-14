@@ -8,8 +8,10 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.2.0'
 gem 'redis'
-gem 'pry-rails'
+gem 'carrierwave', '~> 1.2'
+gem 'cloudinary'
 gem 'geocoder'
+
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
@@ -24,6 +26,8 @@ gem 'pg_search'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 group :development, :test do
