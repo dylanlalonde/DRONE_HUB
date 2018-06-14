@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [ :new, :create]
+  before_action :set_booking, only: [ :new, :show, :create]
 
   def new
     @booking = Booking.new
@@ -8,13 +8,13 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @user = User.find(dose_params[:user_id])
+    @user = current_user
     @booking.user = @user
     @booking.drone = @drone
     if @booking.save
       redirect_to drone_path(@drone)
     else
-      render "drones/show"
+      render "drones"
     end
   end
 
@@ -27,7 +27,7 @@ class BookingsController < ApplicationController
   private
 
   def set_booking
-    @Drone = Drone.find(params[:booking_id])
+    @drone = Drone.find(params[:drone_id])
   end
   def booking_params
     params.require(:booking).permit(:status, :user_id)

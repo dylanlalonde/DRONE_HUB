@@ -1,0 +1,10 @@
+<%= simple_form_for :search, method: "get" do |f| %>
+
+  <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+  <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+
+  <%= f.button :submit, "Rent", class: "btn btn-primary" %>
+<% end %>
+<br>
+<br>
+<br>
