@@ -5,6 +5,5 @@ Rails.application.routes.draw do
   resources :drones do
     resources :bookings, only: [ :new, :show, :create ]
   end
-
 end
 
