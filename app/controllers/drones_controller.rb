@@ -2,7 +2,12 @@ class DronesController < ApplicationController
   before_action :set_drone, only: [ :show, :edit, :update, :destroy]
 
   def index
-    @drones = Drone.all
+    if params[:query].present?
+      sql_query = Drone.search_by_name_and_description_and_category("%#{params[:query]}%")
+      @drones = sql_query
+    else
+      @drones = Drone.all
+    end
   end
 
   def show
