@@ -11,12 +11,12 @@ class DronesController < ApplicationController
         # infoWindow: { content: render_to_string(partial: "/drones/map_box", locals: { drone: drone }) }
       }
     end
-    # if params[:query].present?
-    #   sql_query = Drone.search_by_name_and_description_and_category_and_location("%#{params[:query]}%")
-    #   @drones = sql_query
-    # else
-    #   @drones = Drone.all
-    # end
+    if params[:query].present?
+      sql_query = Drone.search_by_name_and_description_and_category_and_location("%#{params[:query]}%")
+      @drones = sql_query
+    else
+      @drones = Drone.all
+    end
   end
 
   def show
