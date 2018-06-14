@@ -24,10 +24,10 @@
     # creating an instance of the user
     u = User.create(email: email, password: password, name: name, photo: photo, description: description)
     # Drone Loop
-    2.times do
+    5.times do
       name = Faker::StarWars.droid
       description = Faker::VForVendetta.quote
-      location = Faker::University.name
+      location = Faker::Address.full_address
       photo_url = [
         "https://res.cloudinary.com/greggstyle/image/upload/v1528901013/Drone/1.jpg",
         "https://res.cloudinary.com/greggstyle/image/upload/v1528901013/Drone/2.jpg",

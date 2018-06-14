@@ -89,6 +89,7 @@ GEM
       thor (~> 0.14)
     font-awesome-sass (5.0.13)
       sassc (>= 1.11)
+    geocoder (1.4.9)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     http-cookie (1.0.3)
@@ -124,6 +125,10 @@ GEM
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
     pg (0.21.0)
+    pg_search (2.1.2)
+      activerecord (>= 4.2)
+      activesupport (>= 4.2)
+      arel (>= 6)
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -244,9 +249,11 @@ DEPENDENCIES
   faker
   figaro
   font-awesome-sass (~> 5.0.9)
+  geocoder
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
   pg (~> 0.21)
+  pg_search
   pry-byebug
   pry-rails
   puma
