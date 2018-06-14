@@ -17,10 +17,18 @@ $brand-info:      $pink;
 $brand-danger:    $white;
 $brand-warning:   $red;
 
+
 // Buttons & inputs' radius
-$border-radius-base:  2px;
-$border-radius-large: 2px;
-$border-radius-small: 2px;
+$border-radius-base:  2px !important;
+$border-radius-large: 2px !important;
+$border-radius-small: 2px !important;
+
+// //Allows for customizing button radius independently frmo global border radius
+// $btn-border-radius-base:    $border-radius-base  !default;
+// $btn-border-radius-large:   $border-radius-large !default;
+// $btn-border-radius-small:   $border-radius-small !default;
+
+
 
 
 // Patch to make simple_form compatible with bootstrap 3

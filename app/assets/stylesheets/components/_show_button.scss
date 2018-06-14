@@ -44,9 +44,18 @@
 *********************************************/
 
 .product-show{
-  border: 1px solid #dddddd;
-  height: 384px;
+    border: 1px solid #dddddd;
+    height: 375px;
+    width: 100%;
+    background-size: cover !important;
+    background-position: center;
 }
+
+.product-show img{
+  height: 100%;
+  width: 100%;
+}
+
 
 // .product-price{
 //   font-size: 22px;
