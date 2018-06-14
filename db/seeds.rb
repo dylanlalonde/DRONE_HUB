@@ -27,7 +27,7 @@ puts 'making record'
   20.times do
     name = Faker::StarWars.droid
     description = Faker::VForVendetta.quote
-    location = Faker::University.name
+    location = Faker::Address.full_address
     photo = Faker::Pokemon.name
     price = rand(50..200)
     category = ["Delivery", "Military", "Agriculture", "Racing", "Sport", "Photography"].sample
