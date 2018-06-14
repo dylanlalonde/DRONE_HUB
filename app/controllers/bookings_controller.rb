@@ -1,6 +1,9 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [ :new, :show, :create]
 
+  def show
+  end
+
   def new
     @booking = Booking.new
     @users = User.all

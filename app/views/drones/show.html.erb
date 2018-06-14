@@ -10,22 +10,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
   <link rel="stylesheet" href="style.css">
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- Leave those next 4 lines if you care about users using IE8 -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
-  <body >
-
-
+  <body>
 
     <div class="wrapper-blue">
       <div class="container">
-        <h6> <%= link_to "all drones", drones_path, class: 'btn btn-link'%> > <%= link_to "drone", drone_path, class: 'btn btn-link'%></h6>
-        <!--       <h2><%= @drone.name %></h2> -->
+        <h6> <%= link_to "all drones", drones_path, class: 'btn btn-link'%> > <%= link_to "drone", drone_path, class: 'btn btn-link'%> </h6>
 
         <!--        IMAGE ON THE LEFT SIDE -->
         <div class="row">
@@ -48,96 +38,95 @@
                 <a id="item-" class="service1-item">
                   <img src="http://res.cloudinary.com/greggstyle/image/upload/c_scale,h_110,r_0,w_120/v1528895406/Drone/videoblocks-stunning-4k-aerial-drone-view-on-modern-architecture-flower-tower-river-tourist-destination-singapore-asia-in-green-park_b69pmrpkz_thumbnail-full01.png" alt=""></img>
                 </a>
-            </center>
+              </center>
+            </div>
           </div>
-        </div>
 
 
-        <div class="col-xs-12 col-md-6">
-          <h3> <%= @drone.name %> </h3>
+          <div class="col-xs-12 col-md-6">
+            <h3> <%= @drone.name %> </h3>
+            <h5> <%= @drone.category %></h5>
 
-          <span class="label label-success">Available</span>
-          <span class="monospaced">No. <%= @drone.user_id %></span>
-          <br>
-          <p class="description">
+            <span class="label label-success">Available</span>
+            <span class="monospaced">No. <%= @drone.user_id %></span>
+            <br>
+            <p class="description">
+              <%= @drone.description %>
+            </p>
+            <div class="col-md-4">
+              <span class="sr-only">Four out of Five Stars</span>
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+              <span class="label label-success">155</span>
+            </div>
+            <div class="col-md-4">
+              <span class="monospaced">Write a Review</span>
+            </div>
+
+            <div >
+              <h3 class="product-price">$ <%= @drone.price %></h3>
+            </div>
+            <div >
+              <%= link_to "Rent now", drones_path, class: 'btn btn-lg btn-primary btn-full-width'%>
+            </div>
+            <br>
+            <br>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+             <li role="presentation" class="active">
+              <a href="#description"
+              aria-controls="description"
+              role="tab"
+              data-toggle="tab"
+              >Description</a>
+            </li>
+            <li role="presentation">
+              <a href="#location"
+              aria-controls="location"
+              role="tab"
+              data-toggle="tab"
+              >Location</a>
+            </li>
+            <li role="presentation">
+              <a href="#notes"
+              aria-controls="notes"
+              role="tab"
+              data-toggle="tab"
+              >Notes</a>
+            </li>
+            <li role="presentation">
+              <a href="#reviews"
+              aria-controls="reviews"
+              role="tab"
+              data-toggle="tab"
+              >Reviews</a>
+            </li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+           <div role="tabpanel" class="tab-pane active" id="description">
             <%= @drone.description %>
+          </div>
+          <div role="tabpanel" class="tab-pane top-10" id="location">
             <%= @drone.location %>
-          </p>
-          <div class="col-md-4">
-            <span class="sr-only">Four out of Five Stars</span>
-            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-            <span class="label label-success">155</span>
           </div>
-          <div class="col-md-4">
-            <span class="monospaced">Write a Review</span>
+          <div role="tabpanel" class="tab-pane" id="notes">
+            noooooooooteeesssss
           </div>
-
-          <div >
-            <h3 class="product-price">$ <%= @drone.price %></h3>
+          <div role="tabpanel" class="tab-pane" id="reviews">
+            US : "this is a wonderful website to find your drone!"
           </div>
-          <div >
-            <%= link_to "Rent now", drones_path, class: 'btn btn-lg btn-primary btn-full-width'%>
-          </div>
-          <br>
-          <br>
-          <!-- Nav tabs -->
-          <ul class="nav nav-tabs" role="tablist">
-           <li role="presentation" class="active">
-            <a href="#description"
-            aria-controls="description"
-            role="tab"
-            data-toggle="tab"
-            >Description</a>
-          </li>
-          <li role="presentation">
-            <a href="#location"
-            aria-controls="location"
-            role="tab"
-            data-toggle="tab"
-            >Location</a>
-          </li>
-          <li role="presentation">
-            <a href="#notes"
-            aria-controls="notes"
-            role="tab"
-            data-toggle="tab"
-            >Notes</a>
-          </li>
-          <li role="presentation">
-            <a href="#reviews"
-            aria-controls="reviews"
-            role="tab"
-            data-toggle="tab"
-            >Reviews</a>
-          </li>
-        </ul>
-        <!-- Tab panes -->
-        <div class="tab-content">
-         <div role="tabpanel" class="tab-pane active" id="description">
-          <%= @drone.description %>
         </div>
-        <div role="tabpanel" class="tab-pane top-10" id="location">
-          <%= @drone.location %>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="notes">
-          noooooooooteeesssss
-        </div>
-        <div role="tabpanel" class="tab-pane" id="reviews">
-          US : "this is a wonderful website to find your drone!"
-        </div>
+        <br>
       </div>
-<br>
-    </div>
 
+    </div>
   </div>
 </div>
 </div>
-</div>
-
 
 <br>
 <br>
