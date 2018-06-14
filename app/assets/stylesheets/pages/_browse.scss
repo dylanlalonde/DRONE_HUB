@@ -28,4 +28,19 @@
   text-align: center;
 }
 
+.info-window-container {
+  display: flex;
+}
 
+.info-image-container {
+  flex: 1 0 0;
+}
+
+.info-details-container {
+  flex: 1 0 0;
+  max-width: 150px;
+}
+
+.info-details-container h6 {
+  color: $green;
+}
