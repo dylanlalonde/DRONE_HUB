@@ -26,7 +26,7 @@
       <% @drones.each do |drone| %>
       <div class="col-xs-12 col-sm-6 col-md-3">
         <div class="card-wrapper">
-          <div class="card-image">
+          <div class="card-image" style = "background-image: url(<%=drone.photo%>);">
             <div class="card-category">
               <%= drone.category %>
             </div>
@@ -47,7 +47,7 @@
       <% @drones2.each do |drone| %>
       <div class="col-xs-12 col-sm-6 col-md-3">
         <div class="card-wrapper">
-          <div class="card-image">
+          <div class="card-image" style = "background-image: url(<%=drone.photo%>);">
             <div class="card-category">
               <%= drone.category %>
             </div>
