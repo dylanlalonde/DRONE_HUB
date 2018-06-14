@@ -13,7 +13,6 @@
   height: 100vh;
   position: sticky !important; /* !important to override Gmaps inline CSS */
   top: 0 !important;
-  background-color: lightgrey;
 }
 
 .home_search {
@@ -29,4 +28,19 @@
   text-align: center;
 }
 
+.info-window-container {
+  display: flex;
+}
 
+.info-image-container {
+  flex: 1 0 0;
+}
+
+.info-details-container {
+  flex: 1 0 0;
+  max-width: 150px;
+}
+
+.info-details-container h6 {
+  color: $green;
+}

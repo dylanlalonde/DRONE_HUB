@@ -33,8 +33,8 @@
           </div>
           <div class="card-description">
             <h2>  <%= link_to drone.name, drone_path(drone), class: "link-text" %></h2>
-            <h5> Pickup at <%= drone.location %></h5>
-            <h6> $<%= drone.price %> per hour</h6>
+            <h5>  <%= drone.location %></h5>
+            <h6> $<%= drone.price %> per day</h6>
           </div>
         </div>
       </div>
@@ -54,7 +54,7 @@
           </div>
           <div class="card-description">
             <h2>  <%= link_to drone.name, drone_path(drone), class: "link-text" %></h2>
-            <h5> Pickup at <%= drone.location %></h5>
+            <h5>  <%= drone.location %></h5>
             <h6> $<%= drone.price %> per day</h6>
           </div>
         </div>

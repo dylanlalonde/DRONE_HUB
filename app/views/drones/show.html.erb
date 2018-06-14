@@ -22,7 +22,7 @@
           <div class="col-xs-12 col-md-6">
             <div class="product-show service-image-left">
               <center>
-                <img id="item-display" src="http://res.cloudinary.com/greggstyle/image/upload/c_scale,h_277,r_0,w_453/v1528883085/Drone/drone_3.jpg" alt=""></img>
+                <%= cl_image_tag @drone.photo, height: 300, width: 400, crop: :fill %>
               </center>
 
               <center class= "thumbnail-show">
@@ -116,9 +116,63 @@
           <div role="tabpanel" class="tab-pane" id="notes">
             noooooooooteeesssss
           </div>
+
           <div role="tabpanel" class="tab-pane" id="reviews">
             US : "this is a wonderful website to find your drone!"
           </div>
+
+          <div class="submit" >
+            <%= link_to "Rent now", drones_path, class: 'btn btn-lg btn-primary btn-full-width'%>
+            <%= link_to "Delete", drone_path(@drone),method: :delete, class: 'btn btn-lg btn-primary btn-full-width'%>
+          </div>
+
+          <br>
+          <br>
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+           <li role="presentation" class="active">
+            <a href="#description"
+            aria-controls="description"
+            role="tab"
+            data-toggle="tab"
+            >Description</a>
+          </li>
+          <li role="presentation">
+            <a href="#location"
+            aria-controls="location"
+            role="tab"
+            data-toggle="tab"
+            >Location</a>
+          </li>
+          <li role="presentation">
+            <a href="#notes"
+            aria-controls="notes"
+            role="tab"
+            data-toggle="tab"
+            >Notes</a>
+          </li>
+          <li role="presentation">
+            <a href="#reviews"
+            aria-controls="reviews"
+            role="tab"
+            data-toggle="tab"
+            >Reviews</a>
+          </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+         <div role="tabpanel" class="tab-pane active" id="description">
+          <%= @drone.description %>
+        </div>
+        <div role="tabpanel" class="tab-pane top-10" id="location">
+          <%= @drone.location %>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="notes">
+          noooooooooteeesssss
+        </div>
+        <div role="tabpanel" class="tab-pane" id="reviews">
+          US : "this is a wonderful website to find your drone!"
+
         </div>
         <br>
       </div>

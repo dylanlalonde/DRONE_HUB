@@ -1,0 +1,10 @@
+<div class="info-window-container" >
+  <div class="info-image-container">
+     <%= cl_image_tag drone.photo, height: 125, width: 125, crop: :fill %>
+  </div>
+  <div class="info-details-container">
+    <h4> <%= link_to drone.name, drone_path(drone), class: "link-text" %></h4>
+    <p> <%= drone.description %> </p>
+    <h6> $ <%= drone.price %> per day</h6>
+  </div>
+</div>
