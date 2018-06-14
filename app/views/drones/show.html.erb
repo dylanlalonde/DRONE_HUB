@@ -20,10 +20,8 @@
       <!--        IMAGE ON THE LEFT SIDE -->
       <div class="row">
         <div class="col-xs-12 col-md-6">
-          <div class="product-show service-image-left">
-            <center>
-              <%= cl_image_tag @drone.photo, height: 300, width: 400, crop: :fill %>
-            </center>
+          <div class="product-show service-image-left" style = "background-image: url(  <%= cl_image_path @drone.photo, crop: :fill %>);"> >
+
           </div>
         </div>
 
@@ -58,7 +56,7 @@
 
         <div class="submit" >
           <%= link_to "Rent now", new_drone_booking_path(@drone), class: 'btn btn-lg btn-success btn-full-width'%>
-          <%= link_to "Delete", drone_path(@drone),method: :delete, class: 'btn btn-lg btn-danger btn-full-width'%>
+          <%= link_to "Delete", drone_path(@drone),method: :delete, data: { confirm:"Are you sure you want to delete #{@drone.name}"}, class: 'btn btn-lg btn-danger btn-full-width'%>
         </div>
 
         <br>
