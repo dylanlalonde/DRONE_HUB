@@ -2,8 +2,17 @@ class DronesController < ApplicationController
   before_action :set_drone, only: [ :show, :edit, :update, :destroy]
 
   def index
+    @drones = Drone.where.not(latitude: nil, longitude: nil)
+
+    @markers = @drones.map do |drone|
+      {
+        lat: drone.latitude,
+        lng: drone.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/drones/map_box", locals: { drone: drone }) }
+      }
+    end
     if params[:query].present?
-      sql_query = Drone.search_by_name_and_description_and_category("%#{params[:query]}%")
+      sql_query = Drone.search_by_name_and_description_and_category_and_location("%#{params[:query]}%")
       @drones = sql_query
     else
       @drones = Drone.all
