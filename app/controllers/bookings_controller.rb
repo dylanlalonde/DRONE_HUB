@@ -33,7 +33,7 @@ class BookingsController < ApplicationController
     @drone = Drone.find(params[:drone_id])
   end
   def booking_params
-    params.require(:booking).permit(:status, :user_id)
+    params.require(:booking).permit(:status, :user_id, :start_date, :end_date)
   end
 
 end
