@@ -90,17 +90,20 @@
           <div role="tabpanel" class="tab-pane" id="reviews">
             <!--             US : "this is a wonderful website to find your drone!" -->
 
-            <div id="reviews">
+            <div id="reviews-dynamic">
               <% if @drone.reviews.blank? %>
+              <div id="zero-review">
               Be the first to leave a review for <%= @drone.name %>
+              </div>
               <% else %>
               <% @drone.reviews.each do |review| %>
               <%= render 'reviews/show', review: review %>
               <% end %>
               <% end %>
             </div>
-   <%= render 'reviews/form', drone: @drone, review: @review %>
-
+            <div id="new_review">
+            <%= render 'reviews/form', drone: @drone, review: @review %>
+            </div>
           </div>
           <br>
         </div>

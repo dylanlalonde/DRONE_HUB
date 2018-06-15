@@ -5,19 +5,21 @@ function refreshForm(innerHTML) {
 }
 
 function addReview(reviewHTML) {
-  const reviews = document.getElementById('reviews');
+  const reviews = document.getElementById('reviews-dynamic');
   reviews.insertAdjacentHTML('afterbegin', reviewHTML);
   const reviewTitle = document.getElementById('willem');
   reviewTitle.innerHTML = reviewNumber
     const reviewNum = document.getElementById('jason');
 reviewNum.innerHTML = <%= @drone.reviews.size %>
+document.getElementById('zero-review').innerHTML = "";
 }
+
 const reviewNumber = "<a href='#reviews' aria-controls='reviews' role='tab'data-toggle='tab'> <%= pluralize @drone.reviews.size, 'review' %> </a>"
 
 <% if @review.errors.any? %>
 refreshForm('<%= j render "reviews/form", drone: @drone, review: @review %>');
 <% else %>
 addReview('<%= j render "reviews/show", review: @review %>');
-refreshForm('<%= j render "reviews/form", drone: @drone, review: Review.new %>');
+refreshForm('<%= j render "reviews/form", drone: @drone, review: Review.new(drone: @drone) %>');
 <% end %>
 
