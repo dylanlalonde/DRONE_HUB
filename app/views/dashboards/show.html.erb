@@ -1,2 +1,36 @@
-<h1>Dashboards#show</h1>
-<p>Find me in app/views/dashboards/show.html.erb</p>
+
+<h3 class="listing-title"> My Listings </h3>
+
+<div class="dashboard-container">
+
+  <div class="listings-wrapper">
+
+    <div class="listings-container">
+
+      <div class="listings-cards-container">
+
+        <% @listings.each do | listing | %>
+
+          <div class="listings-cards">
+
+            <div class="card-image" style = "background-image: url(<%= cl_image_path(listing.photo) %>);"></div>
+
+            <div class="card-info">
+
+              <h4> <%= listing.name  %> </h4>
+              <h6> <%= listing.location %> </h6>
+              <h6> <%= listing.price %> </h6>
+
+            </div>
+
+          </div>
+
+        <% end %>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
