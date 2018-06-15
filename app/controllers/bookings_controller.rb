@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
     @booking.user = @user
     @booking.drone = @drone
     if @booking.save
-      redirect_to drone_path(@drone)
+      redirect_to dashboards_show_path(@drone)
     else
       render "drones"
     end
