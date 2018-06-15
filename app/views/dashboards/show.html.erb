@@ -38,7 +38,9 @@
               <div class="dashboard-card-info">
                 <h4> <%= link_to rental.drone.name, drone_path(rental.drone), class: "link-text" %> </h4>
                 <p> Status: <%= rental.status %> </p>
-                <p> From <%= rental.start_date %> to <%= rental.end_date %> </p>
+                <h7> <%= rental.start_date %> </h7>
+                <h7> to </h7>
+                <h7> <%= rental.end_date %> </h7>
                 <h6> $<%= rental.drone.price %> per day </h6>
                 <div class="dashboard-buttons">
                   <%= link_to "cancel", drone_path(rental.drone),method: :delete, data: { confirm:"Are you sure you want to cancel rental of #{rental.drone.name}"}, class: 'btn btn-sm btn-warning btn-full-width'%>
