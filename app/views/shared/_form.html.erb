@@ -7,6 +7,7 @@
           <br>
           <div class="form-group">
             <%= f.input :name %>
+            <%= f.input :category, collection: ["Agriculture","Delivery", "Communications", "Medical", "Military","Photography", "Racing", "Sport" ] %>
             <%= f.input :description %>
             <%= f.input :location %>
             <%= f.input :price %>
