@@ -1,0 +1,53 @@
+.listing-title {
+  margin-left: 80px;
+}
+
+.dashboard-container {
+  border-radius: 5px;
+  background-color: lightgrey;
+  margin-right: 60px;
+  margin-left: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: inset 1px 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.listings-wrapper {
+
+}
+
+.listings-container {
+
+}
+
+.listings-cards-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.listings-cards {
+  border-radius: 5px;
+  background-color: $white;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
