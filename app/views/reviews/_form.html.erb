@@ -1,4 +1,4 @@
-<%= simple_form_for([ drone, review ]) do |form| %>
+<%= simple_form_for([ drone, review ], remote: true) do |form| %>
   <%= form.input :content, as: :text %>
-  <%= form.button :submit %>
+  <%= form.button :submit, class: 'btn btn-success'%>
 <% end %>
