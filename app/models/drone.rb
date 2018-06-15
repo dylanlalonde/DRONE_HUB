@@ -3,14 +3,16 @@ class Drone < ApplicationRecord
   belongs_to :user
   has_many :bookings, dependent: :destroy
   has_many :users, through: :bookings
+  has_many :reviews, dependent: :destroy
+
   mount_uploader :photo, PhotoUploader
 
   # SEARCH FUNCTIONALITY:
   pg_search_scope :search_by_name_and_description_and_category_and_location,
-    against: [ :name, :description, :category, :location ],
-    using: {
-      tsearch: { prefix: true }
-    }
+  against: [ :name, :description, :category, :location ],
+  using: {
+    tsearch: { prefix: true }
+  }
 
   # validates :name, presence: true
   # validates :description, presence: true
