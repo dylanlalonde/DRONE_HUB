@@ -1,0 +1,23 @@
+// Here you generate *JavaScript* that would be executed in the browser
+function refreshForm(innerHTML) {
+  const newReviewForm = document.getElementById('new_review');
+  newReviewForm.innerHTML = innerHTML;
+}
+
+function addReview(reviewHTML) {
+  const reviews = document.getElementById('reviews');
+  reviews.insertAdjacentHTML('afterbegin', reviewHTML);
+  const reviewTitle = document.getElementById('willem');
+  reviewTitle.innerHTML = reviewNumber
+    const reviewNum = document.getElementById('jason');
+reviewNum.innerHTML = <%= @drone.reviews.size %>
+}
+const reviewNumber = "<a href='#reviews' aria-controls='reviews' role='tab'data-toggle='tab'> <%= pluralize @drone.reviews.size, 'review' %> </a>"
+
+<% if @review.errors.any? %>
+refreshForm('<%= j render "reviews/form", drone: @drone, review: @review %>');
+<% else %>
+addReview('<%= j render "reviews/show", review: @review %>');
+refreshForm('<%= j render "reviews/form", drone: @drone, review: Review.new %>');
+<% end %>
+
