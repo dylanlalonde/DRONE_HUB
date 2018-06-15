@@ -8,57 +8,97 @@
     <div class="elemnt5"></div>
   </div>
   <div class="banner">
-  <div class="banner-content">
+    <div class="banner-content">
       <h1>DRONE_HUB</h1>
       <div class="search-container">
-          <%= form_tag(drones_path, method: :get) do %>
-            <%= text_field_tag :query, nil, placeholder: "Search..." %>
+        <%= form_tag(drones_path, method: :get) do %>
+          <%= text_field_tag :query, nil, placeholder: "Search..." %>
             <%= submit_tag "Rent a drone", class: "btn btn-primary btn-mg"%>
-          <% end %>
+              <% end %>
       </div>
-  </div>
+    </div>
   </div>
 </div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <div class="index_card">
+        <div class="index_image">
+          <%= image_tag '20.png' %>
+        </div>
+        <h3>
+           Rent Easily 
+          <h3>
+            <p> Users can upload their drone for others to use. </p>
+      </div>
+    </div>
+  <div class="col-xs-12 col-md-6">
+    <div class="index_card">
+      <div class="index_image">
+        <%= image_tag '22.png' %>
+      </div>
+      <h3>
+         Insurance Included
+        <h3>
+          <p> With premium insurence, we assure
+            a 100% guarantee% to pay for any damages. </p>
+    </div>
+  </div>
+</div>
+</div>
+
 
 <div class="cards-container">
-    <div class="row">
-    <h2>Most Popular<h2>
-      <% @drones.each do |drone| %>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="card-wrapper">
-          <div class="card-image" style = "background-image: url(<%=drone.photo%>);">
-            <div class="card-category">
-              <%= drone.category %>
+  <div class="row">
+    <h2>Most Popular
+      <h2>
+        <% @drones.each do |drone| %>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="card-wrapper">
+              <div class="card-image" style="background-image: url(<%=drone.photo%>);">
+                <div class="card-category">
+                  <%= drone.category %>
+                </div>
+              </div>
+              <div class="card-description">
+                <h2>
+                  <%= link_to drone.name, drone_path(drone), class: "link-text" %>
+                </h2>
+                <h5>
+                  <%= drone.location %>
+                </h5>
+                <h6> $
+                  <%= drone.price %> per day</h6>
+              </div>
             </div>
           </div>
-          <div class="card-description">
-            <h2>  <%= link_to drone.name, drone_path(drone), class: "link-text" %></h2>
-            <h5>  <%= drone.location %></h5>
-            <h6> $<%= drone.price %> per day</h6>
-          </div>
-        </div>
-      </div>
-      <% end %>
-    </div>
+          <% end %>
   </div>
-  <div class="cards-container">
-    <div class="row">
-    <h2> Delivery Drones <h2>
-      <% @drones2.each do |drone| %>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="card-wrapper">
-          <div class="card-image" style = "background-image: url(<%=drone.photo%>);">
-            <div class="card-category">
-              <%= drone.category %>
+</div>
+<div class="cards-container">
+  <div class="row">
+    <h2> Delivery Drones
+      <h2>
+        <% @drones2.each do |drone| %>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="card-wrapper">
+              <div class="card-image" style="background-image: url(<%=drone.photo%>);">
+                <div class="card-category">
+                  <%= drone.category %>
+                </div>
+              </div>
+              <div class="card-description">
+                <h2>
+                  <%= link_to drone.name, drone_path(drone), class: "link-text" %>
+                </h2>
+                <h5>
+                  <%= drone.location %>
+                </h5>
+                <h6> $
+                  <%= drone.price %> per day</h6>
+              </div>
             </div>
           </div>
-          <div class="card-description">
-            <h2>  <%= link_to drone.name, drone_path(drone), class: "link-text" %></h2>
-            <h5>  <%= drone.location %></h5>
-            <h6> $<%= drone.price %> per day</h6>
-          </div>
-        </div>
-      </div>
-      <% end %>
-    </div>
+          <% end %>
   </div>
+</div>

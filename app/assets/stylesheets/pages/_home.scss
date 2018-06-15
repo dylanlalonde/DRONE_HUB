@@ -1,1 +1,25 @@
 // Specific CSS for your home-page
+.index_card h3 {
+    text-align: center;
+}
+
+.index_card p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.index_card img {
+    height: 150px;
+    width: 150px;
+}
+
+.index_image {
+    display: flex;
+    justify-content: center;
+}
+
+.index_card {
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 40px;
+}
