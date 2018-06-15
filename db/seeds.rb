@@ -24,7 +24,7 @@
     # creating an instance of the user
     u = User.create(email: email, password: password, name: name, photo: photo, description: description)
     # Drone Loop
-    5.times do
+    20.times do
       name = Faker::StarWars.droid
       description = Faker::VForVendetta.quote
       location = Faker::Address.full_address
@@ -53,7 +53,7 @@
       d.user = u
       d.save
       # Booking Loop
-      2.times do
+      1.times do
         status = "pending"
         start_date = Time.now
         end_date = Time.parse ("Aug #{rand(1..31)} 2018")
