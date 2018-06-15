@@ -31,10 +31,10 @@
           <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-          <span class="label label-primary">155</span>
+          <span class="label label-primary"> <%= @drone.reviews.size %> </span>
         </div>
         <div class="col-md-4">
-          <span class="monospaced">Write a Review</span>
+          <span class="monospaced">Write a review</span>
         </div>
 
         <div >
@@ -77,7 +77,7 @@
             aria-controls="reviews"
             role="tab"
             data-toggle="tab"
-            >Reviews</a>
+            > <%= pluralize @drone.reviews.size, "review" %> </a>
           </li>
         </ul>
         <!-- Tab panes -->
@@ -92,12 +92,24 @@
             noooooooooteeesssss
           </div> -->
           <div role="tabpanel" class="tab-pane" id="reviews">
-            US : "this is a wonderful website to find your drone!"
+            <!--             US : "this is a wonderful website to find your drone!" -->
+            <div id="reviews">
+              <% if @drone.reviews.blank? %>
+              Be the first to leave a review for <%= @drone.name %>
+              <% else %>
+              <% @drone.reviews.each do |review| %>
+              <%= render 'reviews/show', review: review %>
+              <% end %>
+              <% end %>
+            </div>
+            <%= render 'reviews/form', drone: @drone, review: @review %>
+
           </div>
           <br>
         </div>
 
       </div>
+      <%#= render 'reviews/form', drone: @drone, review: @review %>
     </div>
   </div>
 </div>
