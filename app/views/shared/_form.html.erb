@@ -1,27 +1,24 @@
-<div class ="container-form">
+<div class ="container">
   <div class="row">
-    <div class="col-sm-10 col-md-12">
-      <header> </header>
-      <div id="form">
+    <div id="form">
+      <div class="col-sm-12 col-md-6 col-md-offset-3"> 
+          <%= simple_form_for(@drone) do |f| %>
+          <h1>Add Drone</h1>
+          <br>
+          <div class="form-group">
+            <%= f.input :name %>
+            <%= f.input :description %>
+            <%= f.input :location %>
+            <%= f.input :price %>
+            <%= f.input :photo %>
+            <%= f.input :photo_cache, as: :hidden %>
+          </div>
+          <%= f.submit class: 'btn btn-primary' %>
+          <% end %>
+          <br>
 
-
-        <%= simple_form_for(@drone) do |f| %>
-        <h1>Add Drone</h1>
-        <br>
-        <div class="form-group">
-          <%= f.input :name %>
-          <%= f.input :description %>
-          <%= f.input :location %>
-          <%= f.input :price %>
-          <%= f.input :photo %>
-          <%= f.input :photo_cache, as: :hidden %>
         </div>
-        <%= f.submit class: 'btn btn-primary' %>
-        <% end %>
-        <br>
-
       </div>
-    </div>
   </div>
 </div>
 
