@@ -1,8 +1,7 @@
-.slideshow_container
-{
-width:100vw;
-height: calc(100vh - 50px);
-position: relative;
+.slideshow_container {
+  width: 100vw;
+  height: calc(100vh - 50px);
+  position: relative;
 }
 
 #slideshow {
@@ -10,108 +9,120 @@ position: relative;
   margin: 0;
   padding: 0;
   position: relative;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   display: inline-block;
 }
-.elemnt,.elemnt1,.elemnt2,.elemnt3,.elemnt4, .element5 {
-position: absolute;
-left: 0;
-width: 100%;
-background-repeat: no-repeat;
-background-size: cover;
-height: 100%;
-display: inline-block;
-text-align: center;
+
+.elemnt,
+.elemnt1,
+.elemnt2,
+.elemnt3,
+.elemnt4,
+.element5 {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
 }
 
 .elemnt {
   animation: xfade 10s 6s infinite;
-  background-image: url('https://res.cloudinary.com/greggstyle/image/upload/v1528901014/Drone/10.jpg');
+  background-image: url('http://res.cloudinary.com/greggstyle/image/upload/c_scale,h_596/v1528901022/Drone/11.png');
 }
+
 .elemnt1 {
   animation: xfade 10s 6s infinite;
-  background-image: url('https://res.cloudinary.com/greggstyle/image/upload/v1528901022/Drone/11.png');
+  background-image: url('http://res.cloudinary.com/greggstyle/image/upload/c_scale,h_514/v1528901018/Drone/12.png');
 }
+
 .elemnt2 {
   animation: xfade 10s 6s infinite;
-  background-image: url('https://res.cloudinary.com/greggstyle/image/upload/v1528901018/Drone/12.png');
+  background-image: url('http://res.cloudinary.com/greggstyle/image/upload/c_scale,h_531/v1528901019/Drone/13.png');
 }
+
 .elemnt3 {
   animation: xfade 10s 6s infinite;
-  background-image: url('https://res.cloudinary.com/greggstyle/image/upload/v1528901019/Drone/13.png');
+  background-image: url('http://res.cloudinary.com/greggstyle/image/upload/c_scale,h_532/v1528901018/Drone/14.png');
 }
+
 .elemnt4 {
   animation: xfade 10s 6s infinite;
-  background-image: url('https://res.cloudinary.com/greggstyle/image/upload/v1528901018/Drone/14.png');
+  background-image: url('http://res.cloudinary.com/greggstyle/image/upload/c_scale,h_543/v1528901019/Drone/15.png');
 }
-.elemnt5 {
-  animation: xfade 10s 6s infinite;
-  background-image: url('https://res.cloudinary.com/greggstyle/image/upload/v1528901019/Drone/15.png');
-}
-@keyframes xfade{
+
+@keyframes xfade {
   17% {
-    opacity:1;
+    opacity: 1;
   }
   25% {
-    opacity:0;
+    opacity: 0;
   }
   92% {
-    opacity:0;
+    opacity: 0;
   }
 }
-@keyframes xfade1{
+
+@keyframes xfade1 {
   17% {
-    opacity:1;
+    opacity: 1;
   }
   25% {
-    opacity:0;
+    opacity: 0;
   }
   92% {
-    opacity:0;
+    opacity: 0;
   }
 }
-@keyframes xfade2{
+
+@keyframes xfade2 {
   17% {
-    opacity:1;
+    opacity: 1;
   }
   25% {
-    opacity:0;
+    opacity: 0;
   }
   92% {
-    opacity:0;
+    opacity: 0;
   }
 }
-@keyframes xfade3{
+
+@keyframes xfade3 {
   17% {
-    opacity:1;
+    opacity: 1;
   }
   25% {
-    opacity:0;
+    opacity: 0;
   }
   92% {
-    opacity:0;
+    opacity: 0;
   }
 }
-@keyframes xfade4{
+
+@keyframes xfade4 {
   17% {
-    opacity:1;
+    opacity: 1;
   }
   25% {
-    opacity:0;
+    opacity: 0;
   }
   92% {
-    opacity:0;
+    opacity: 0;
   }
 }
-@keyframes xfade5{
+
+@keyframes xfade5 {
   17% {
-    opacity:1;
+    opacity: 1;
   }
   25% {
-    opacity:0;
+    opacity: 0;
   }
   92% {
-    opacity:0;
+    opacity: 0;
   }
 }
