@@ -1,36 +1,50 @@
-
 <h3 class="listing-title"> My Listings </h3>
 
 <div class="dashboard-container">
-
   <div class="listings-wrapper">
-
     <div class="listings-container">
-
       <div class="listings-cards-container">
-
         <% @listings.each do | listing | %>
-
-          <div class="listings-cards">
-
+          <div class="dashboard-cards">
             <div class="dashboard-card-image" style = "background-image: url(<%= cl_image_path(listing.photo) %>);"></div>
-
-            <div class="card-info">
-
-              <h4> <%= listing.name  %> </h4>
-              <h6> <%= listing.location %> </h6>
-              <h6> <%= listing.price %> </h6>
-
+            <div class="dashboard-card-info">
+              <h4> <%= link_to listing.name, drone_path(listing), class: "link-text" %> </h4>
+              <p> <%= listing.location %> </p>
+              <h6> $<%= listing.price %> per day </h6>
+              <div class="dashboard-buttons">
+                <%= link_to "Edit", edit_drone_path(listing), class: 'btn btn-sm btn-success btn-full-width'%>
+                <%= link_to "Delete", drone_path(listing),method: :delete, data: { confirm:"Are you sure you want to delete #{listing.name}"}, class: 'btn btn-sm btn-warning btn-full-width'%>
+              </div>
             </div>
-
           </div>
-
         <% end %>
-
         </div>
-
       </div>
-
     </div>
-
   </div>
+
+<h3 class="listing-title"> My Rentals </h3>
+
+<div class="dashboard-container">
+    <div class="rentals-wrapper">
+      <div class="rentals-container">
+        <div class="rentals-cards-container">
+          <% @rentals.each do |rental| %>
+          <div class="dashboard-cards">
+            <div class="dashboard-card-image" style = "background-image: url(<%= cl_image_path(rental.drone.photo) %>);"></div>
+              <div class="dashboard-card-info">
+                <h4> <%= link_to rental.drone.name, drone_path(rental.drone), class: "link-text" %> </h4>
+                <p> Status: <%= rental.status %> </p>
+                <p> From <%= rental.start_date %> to <%= rental.end_date %> </p>
+                <h6> $<%= rental.drone.price %> per day </h6>
+                <div class="dashboard-buttons">
+                  <%= link_to "cancel", drone_path(rental.drone),method: :delete, data: { confirm:"Are you sure you want to cancel rental of #{rental.drone.name}"}, class: 'btn btn-sm btn-warning btn-full-width'%>
+                </div>
+              </div>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

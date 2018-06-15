@@ -27,7 +27,7 @@
   justify-content: center;
 }
 
-.listings-cards {
+.dashboard-cards {
   border-radius: 5px;
   background-color: $white;
   margin-right: 10px;
@@ -40,14 +40,32 @@
 }
 
 .dashboard-card-image {
+  background-size: cover !important;
+  background-position: center;
   width: 200px;
   height: 200px;
   border-radius: 5px;
 }
 
-.card-info {
+.dashboard-card-info {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-card-info h4 a:hover {
+  color: $green;
+  text-decoration: none;
+}
+
+.dashboard-card-info h6 {
+  color: $green;
+}
+
+.rentals-cards-container {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
