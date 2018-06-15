@@ -4,6 +4,9 @@
   <div class="row">
     <div id="form">
       <div class="col-sm-12 col-md-6 col-md-offset-3"> 
+      <h1>Book your drone </h1>
+      <h2><%= @drone.name %></h2>  
+
           <%= simple_form_for([@drone, @booking]) do |f| %>
           <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
           <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
