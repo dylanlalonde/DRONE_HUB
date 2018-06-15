@@ -1,10 +1,26 @@
-<%= simple_form_for :search, method: "get" do |f| %>
 
-  <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
-  <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
 
-  <%= f.button :submit, "Rent", class: "btn btn-primary" %>
-<% end %>
-<br>
-<br>
-<br>
+<div class ="container">
+  <div class="row">
+    <div id="form">
+      <div class="col-sm-12 col-md-6">
+          <%= simple_form_for([@drone, @booking]) do |f| %>
+          <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.submit class: 'btn btn-lg btn-success btn-full-width'%>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-3">
+        <div id=image style="max-height: 70vh;">
+         <%= image_tag '16.jpg' %> 
+        </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
