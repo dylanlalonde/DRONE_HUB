@@ -33,10 +33,22 @@
         "https://res.cloudinary.com/greggstyle/image/upload/v1528901013/Drone/2.jpg",
         "https://res.cloudinary.com/greggstyle/image/upload/v1528901013/Drone/3.png",
         "https://res.cloudinary.com/greggstyle/image/upload/v1528901013/Drone/4.png",
-        "https://res.cloudinary.com/greggstyle/image/upload/v1528901013/Drone/5.png"
+        "https://res.cloudinary.com/greggstyle/image/upload/v1528901013/Drone/5.png",
+        "https://res.cloudinary.com/greggstyle/image/upload/v1529071632/Drone/perrot-bebop.jpg",
+        "https://res.cloudinary.com/greggstyle/image/upload/v1529071632/Drone/yuneec-typhoon.jpg",
+        "https://res.cloudinary.com/greggstyle/image/upload/v1529071632/Drone/hubsan.jpg",
+        "https://res.cloudinary.com/greggstyle/image/upload/v1529071632/Drone/parrot-mambo.jpg",
+        "https://res.cloudinary.com/greggstyle/image/upload/v1529071632/Drone/hexa.jpg",
+        "https://res.cloudinary.com/greggstyle/image/upload/v1529071632/Drone/syma-x20.jpg",
+        "https://res.cloudinary.com/greggstyle/image/upload/v1529071632/Drone/freeflyh.jpg",
+        "https://res.cloudinary.com/greggstyle/image/upload/v1529071632/Drone/fpv-fv.jpg",
+        "https://res.cloudinary.com/greggstyle/image/upload/v1529071622/Drone/dji-phantom.jpg",
+        "https://res.cloudinary.com/greggstyle/image/upload/v1529071622/Drone/dji-inspire.jpg",
+        "https://res.cloudinary.com/greggstyle/image/upload/v1529071622/Drone/dji-phantom-pro.jpg",
+        "https://res.cloudinary.com/greggstyle/image/upload/v1529071632/Drone/perrot-bebop.jpg"
       ].sample
       price = rand(50..200)
-      category = ["Delivery", "Military", "Agriculture", "Racing", "Sport", "Photography"].sample
+      category = ["Delivery", "Military", "Agriculture", "Racing", "Sport", "Photography", "Medical", "Communications"].sample
       d= Drone.new({name: name, description: description, location: location, remote_photo_url: photo_url, price:price, category:category})
       d.user = u
       d.save

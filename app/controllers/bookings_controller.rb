@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [ :new, :show, :create]
+  before_action :set_booking, only: [ :new, :show, :create,]
 
   def show
   end
@@ -15,16 +15,16 @@ class BookingsController < ApplicationController
     @booking.user = @user
     @booking.drone = @drone
     if @booking.save
-      redirect_to dashboards_path(@drone)
+      redirect_to dashboard_path
     else
       render "drones"
     end
   end
 
   def destroy
-    @booking = booking.find(params[:id])
+    @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to drone_path(@booking.drone)
+    redirect_to dashboard_path
   end
 
   private
