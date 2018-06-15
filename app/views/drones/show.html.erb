@@ -1,62 +1,50 @@
-<!DOCTYPE html>
-<html>
-<head>
- <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Grid tricks</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
-  <link rel="stylesheet" href="style.css">
-  </head>
-<body> 
+<div class="wrapper-blue">
+  <div class="container">
+    <h6> <%= link_to "all drones", drones_path, class: 'btn btn-link'%> > <%= link_to "drone", drone_path, class: 'btn btn-link'%> </h6>
 
-  <div class="wrapper-blue">
-    <div class="container">
-      <h6> <%= link_to "all drones", drones_path, class: 'btn btn-link'%> > <%= link_to "drone", drone_path, class: 'btn btn-link'%> </h6>
 
-      <!--        IMAGE ON THE LEFT SIDE -->
-      <div class="row">
-        <div class="col-xs-12 col-md-6">
-          <div class="product-show service-image-left" style = "background-image: url(  <%= cl_image_path @drone.photo, crop: :fill %>);"> >
+    <!--        IMAGE ON THE LEFT SIDE -->
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <div class="image-show" style = "background-image: url(  <%= cl_image_path @drone.photo, crop: :fill %>);"> >
 
-          </div>
+        </div>
+      </div>
+
+
+      <div class="col-xs-12 col-md-6">
+        <h3> <%= @drone.name %> </h3>
+        <h5> <%= @drone.category %></h5>
+
+        <span class="label label-primary">available</span>
+        <span class="monospaced">No. <%= @drone.user_id %></span>
+        <br>
+        <p class="description">
+          <%= @drone.description %>
+        </p>
+        <div class="col-md-4">
+          <span class="sr-only">Four out of Five Stars</span>
+          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+          <span class="label label-primary">155</span>
+        </div>
+        <div class="col-md-4">
+          <span class="monospaced">Write a Review</span>
+        </div>
+
+        <div >
+          <h3 >$ <%= @drone.price %></h3>
         </div>
 
 
-        <div class="col-xs-12 col-md-6">
-          <h3> <%= @drone.name %> </h3>
-          <h5> <%= @drone.category %></h5>
-
-          <span class="label label-success">Available</span>
-          <span class="monospaced">No. <%= @drone.user_id %></span>
-          <br>
-          <p class="description">
-            <%= @drone.description %>
-          </p>
-          <div class="col-md-4">
-            <span class="sr-only">Four out of Five Stars</span>
-            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-            <span class="label label-success">155</span>
-          </div>
-          <div class="col-md-4">
-            <span class="monospaced">Write a Review</span>
-          </div>
-
-          <div >
-            <h3 class="product-price">$ <%= @drone.price %></h3>
-          </div>
-
-
         <div class="submit" >
-          <%= link_to "Rent now", new_drone_booking_path(@drone), class: 'btn btn-lg btn-success btn-full-width'%>
-          <%= link_to "Delete", drone_path(@drone),method: :delete, data: { confirm:"Are you sure you want to delete #{@drone.name}"}, class: 'btn btn-lg btn-danger btn-full-width'%>
+          <%= link_to "Rent now", new_drone_booking_path(@drone), class: 'btn btn-lg btn-primary btn-full-width'%>
+          <%= link_to "Delete", drone_path(@drone),method: :delete, data: { confirm:"Are you sure you want to delete #{@drone.name}"}, class: 'btn btn-lg btn-warning btn-full-width'%>
         </div>
 
         <br>
@@ -64,59 +52,57 @@
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
           <li role="presentation" class="active">
-          <a href="#description"
-          aria-controls="description"
-          role="tab"
-          data-toggle="tab"
-          >Description</a>
-        </li>
-        <li role="presentation">
-          <a href="#location"
-          aria-controls="location"
-          role="tab"
-          data-toggle="tab"
-          >Location</a>
-        </li>
-        <li role="presentation">
-          <a href="#notes"
-          aria-controls="notes"
-          role="tab"
-          data-toggle="tab"
-          >Notes</a>
-        </li>
-        <li role="presentation">
-          <a href="#reviews"
-          aria-controls="reviews"
-          role="tab"
-          data-toggle="tab"
-          >Reviews</a>
-        </li>
-      </ul>
-      <!-- Tab panes -->
-      <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="description">
-        <%= @drone.description %>
-      </div>
-      <div role="tabpanel" class="tab-pane top-10" id="location">
-        <%= @drone.location %>
-      </div>
-      <div role="tabpanel" class="tab-pane" id="notes">
-        noooooooooteeesssss
-      </div>
-      <div role="tabpanel" class="tab-pane" id="reviews">
-        US : "this is a wonderful website to find your drone!"
-      </div>
-      <br>
-    </div>
+            <a href="#description"
+            aria-controls="description"
+            role="tab"
+            data-toggle="tab"
+            >Description</a>
+          </li>
+          <li role="presentation">
+            <a href="#location"
+            aria-controls="location"
+            role="tab"
+            data-toggle="tab"
+            >Location</a>
+          </li>
+<!--           <li role="presentation">
+            <a href="#notes"
+            aria-controls="notes"
+            role="tab"
+            data-toggle="tab"
+            >Notes</a>
+          </li> -->
+          <li role="presentation">
+            <a href="#reviews"
+            aria-controls="reviews"
+            role="tab"
+            data-toggle="tab"
+            >Reviews</a>
+          </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="description">
+            <%= @drone.description %>
+          </div>
+          <div role="tabpanel" class="tab-pane top-10" id="location">
+            <%= @drone.location %>
+          </div>
+<!--           <div role="tabpanel" class="tab-pane" id="notes">
+            noooooooooteeesssss
+          </div> -->
+          <div role="tabpanel" class="tab-pane" id="reviews">
+            US : "this is a wonderful website to find your drone!"
+          </div>
+          <br>
+        </div>
 
+      </div>
+    </div>
   </div>
 </div>
-</div>
-</div>
 
 <br>
 <br>
 <br>
 
-</body>
-</html>

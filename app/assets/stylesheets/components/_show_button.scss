@@ -1,49 +1,5 @@
 
-/* body {
-  font-weight: 100;
-  font-size: 16px;
-  line-height: 1.4;
-} */
-// h2 {
-//   font-weight: 200;
-//   font-size: 25px;
-// }
-// .wrapper-blue {
-//   background: $blue;
-//   color: white;
-//   padding: 2em 0;
-// }
-// .wrapper-grey {
-//   background: #EDEFF0;
-//   color: #4e4e4e;
-// }
-// .card-white {
-//   background: white;
-//   padding: 30px;
-//   box-shadow: 1px 1px 2px #e7e7e7;
-//   border-radius: 4px;
-//   margin: 20px 50px;
-// }
-
-
-
-/*********************************************
-          PRODUCTS
-*********************************************/
-.add-to-cart .btn-qty {
-  width: 52px;
-  height: 46px;
-}
-
-.add-to-cart .btn {
-  border-radius: 5px;
-}
-
-/*********************************************
-          PRODUCTS
-*********************************************/
-
-.product-show{
+.image-show{
     border: 1px solid #dddddd;
     height: 375px;
     width: 100%;
@@ -51,89 +7,13 @@
     background-position: center;
 }
 
-.product-show img{
+.image-show img{
   height: 100%;
   width: 100%;
 }
-
-
-// .product-price{
-//   font-size: 22px;
-// }
-
-/*********************************************
-          VIEW
-*********************************************/
-
 
 .view-wrapper {
   float: right;
   max-width: 70%;
   margin-top: 25px;
 }
-
-// .container {
-//   padding-left: 0px;
-//   padding-right: 0px;
-//   max-width: 100%;
-// }
-
-/*********************************************
-        ITEM
-*********************************************/
-
-.service1-items {
-  padding: 0px 0 0px 0;
-  float: left;
-  position: relative;
-  overflow: hidden;
-  max-width: 100%;
-  height: 321px;
-  width: 130px;
-}
-
-.service1-item {
-  height: 107px;
-  width: 113px;
-  display: block;
-  float: left;
-  position: relative;
-  padding-right: 20px;
-  border-right: 1px solid #DDD;
-  border-top: 1px solid #DDD;
-  border-bottom: 1px solid #DDD;
-}
-
-.service1-item > img {
-  max-height: 110px;
-  max-width: 110px;
-  opacity: 0.6;
-  transition: all .2s ease-in;
-  -o-transition: all .2s ease-in;
-  -moz-transition: all .2s ease-in;
-  -webkit-transition: all .2s ease-in;
-}
-
-.service1-item > img:hover {
-  cursor: pointer;
-  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-  opacity: 1;
-}
-
-.thumbnail-show {
-  display: block;
-  margin-left: 50px;
-  margin-right: 50px;
-  width: 100%;
-}
-// .service-image-left {
-//   padding-right: 50px;
-// }
-
-// .service-image-right {
-//   padding-left: 50px;
-// }
-
-// .service-image-left > center > img,.service-image-right > center > img{
-//   max-height: 155px;
-// }
