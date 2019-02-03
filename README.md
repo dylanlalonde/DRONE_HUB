@@ -1,1 +1,2 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+This is a Ruby on Rails app I built at LeWagon - Amsterdam, batch-154.
+With it, users can rent drones from each other.
